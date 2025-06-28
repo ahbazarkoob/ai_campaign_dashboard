@@ -98,7 +98,7 @@ const CreateCampaignForm = () => {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-8 max-w-[400px]"
+              className="space-y-8 "
             >
               <FormField
                 control={form.control}
