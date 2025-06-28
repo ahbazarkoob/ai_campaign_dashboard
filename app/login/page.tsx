@@ -29,7 +29,7 @@ export default function LoginPage() {
     e.preventDefault();
     try {
       const { token } = await login(email, password);
-      dispatch(setToken(token));
+      dispatch(setToken({ token: token }));
       router.push("/");
     } catch (err) {
       setError("Invalid email or password");

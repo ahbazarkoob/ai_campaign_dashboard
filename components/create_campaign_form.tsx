@@ -55,14 +55,14 @@ const CreateCampaignForm = () => {
     },
   });
 
-//   const {
-//     data: campaigns,
-//     isLoading,
-//     error,
-//   } = useQuery<Campaign[]>({
-//     queryKey: ["campaigns"],
-//     queryFn: getCampaigns,
-//   });
+  //   const {
+  //     data: campaigns,
+  //     isLoading,
+  //     error,
+  //   } = useQuery<Campaign[]>({
+  //     queryKey: ["campaigns"],
+  //     queryFn: getCampaigns,
+  //   });
 
   const mutation = useMutation({
     mutationFn: createCampaign,
@@ -75,7 +75,6 @@ const CreateCampaignForm = () => {
       });
     },
   });
-
 
   function onSubmit(values: z.infer<typeof createCampaignSchema>) {
     mutation.mutate(values);
@@ -96,10 +95,7 @@ const CreateCampaignForm = () => {
           <DialogTitle>Create Campaign</DialogTitle>
           <DialogDescription></DialogDescription>
           <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-8 "
-            >
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
               <FormField
                 control={form.control}
                 name="name"
