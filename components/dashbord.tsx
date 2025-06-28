@@ -1,36 +1,51 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import imageURL from "@/app/assets/AI_Campaign_logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useDispatch } from "react-redux";
+import { clearToken } from "@/store/slices/authSlice";
+import CampaignData from "./campaign_data";
 
 const Dashboard = () => {
+  const dispatch = useDispatch();
   const router = useRouter();
+
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    dispatch(clearToken());
     router.push("/login");
   };
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="bg-white p-6 rounded shadow-md text-center max-w-lg">
-        <h1 className="text-3xl font-bold mb-4">
-          Welcome to AI Campaign Dashboard
-        </h1>
-        <p className="text-gray-600 mb-6">Manage your campaigns with ease.</p>
-        <div className="flex justify-center space-x-4">
-          <Link
-            href="/campaigns"
-            className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          >
-            Go to Campaigns
-          </Link>
-          <button
-            onClick={handleLogout}
-            className="bg-red-500 text-white p-2 rounded hover:bg-red-600"
-          >
-            Logout
-          </button>
-        </div>
+    <main className="w-full h-screen flex-1 overflow-hidden">
+      <div className="flex flex-row justify-between p-4">
+        <Link href={"/dashboard"}>
+          <Image src={imageURL} alt={"logo"} height={48} priority />
+        </Link>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Avatar>
+              <AvatarImage src="https://github.com/shadcn.png" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
-    </div>
+      <CampaignData />
+    </main>
   );
 };
 

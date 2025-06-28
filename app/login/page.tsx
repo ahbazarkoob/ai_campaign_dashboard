@@ -24,14 +24,13 @@ export default function LoginPage() {
   const [error, setError] = useState("");
   const router = useRouter();
   const dispatch = useDispatch();
-  
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const { token } = await login(email, password);
-      localStorage.setItem("token", token); // Store mock token
       dispatch(setToken(token));
-      router.push("/dashboard");
+      router.push("/");
     } catch (err) {
       setError("Invalid email or password");
       alert(err);

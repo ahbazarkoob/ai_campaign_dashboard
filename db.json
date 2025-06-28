@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "user@example.com",
       "password": "password123",
       "token": "mock-jwt-token"
@@ -46,6 +46,22 @@
       "type": "email",
       "startDate": "2025-06-28T15:52",
       "message": "Campaign Message",
+      "status": "scheduled"
+    },
+    {
+      "id": "uwfdi27kwvi",
+      "name": "Campaign NAme",
+      "type": "call",
+      "startDate": "2025-06-28T19:10",
+      "message": "Message",
+      "status": "scheduled"
+    },
+    {
+      "id": "n8m5sjneel9",
+      "name": "Campaign NAme",
+      "type": "call",
+      "startDate": "2025-06-28T19:10",
+      "message": "Message",
       "status": "scheduled"
     }
   ]
