@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user@example.com",
+      "password": "password123",
+      "token": "mock-jwt-token"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "1",
+      "name": "Welcome Email",
+      "type": "email",
+      "startDate": "2025-06-28T10:00:00Z",
+      "message": "Welcome to our platform!",
+      "status": "scheduled"
+    },
+    {
+      "id": "2",
+      "name": "Follow-up Call",
+      "type": "call",
+      "startDate": "2025-06-29T14:00:00Z",
+      "message": "Follow-up call with customer",
+      "status": "running"
+    },
+    {
+      "id": "j11xi7x7u1a",
+      "name": "Update SMS",
+      "type": "sms",
+      "startDate": "2025-06-27T06:45",
+      "message": "Update regarding the campaign",
+      "status": "completed"
+    },
+    {
+      "id": "py9cbd9geqm",
+      "name": "New",
+      "type": "call",
+      "startDate": "2025-06-30T18:42",
+      "message": "dvevd",
+      "status": "scheduled"
+    },
+    {
+      "id": "7mi04bmeey6",
+      "name": "Test Campaign",
+      "type": "email",
+      "startDate": "2025-06-28T15:52",
+      "message": "Campaign Message",
+      "status": "scheduled"
+    }
+  ]
+}
