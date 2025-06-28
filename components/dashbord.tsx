@@ -25,8 +25,8 @@ const Dashboard = () => {
     router.push("/login");
   };
   return (
-    <main className="w-full h-screen flex-1 overflow-hidden">
-      <div className="flex flex-row justify-between p-4">
+    <main className="flex flex-col w-full h-full flex-1 gap-5">
+      <div className="flex flex-row justify-between">
         <Link href={"/dashboard"}>
           <Image src={imageURL} alt={"logo"} height={48} priority />
         </Link>

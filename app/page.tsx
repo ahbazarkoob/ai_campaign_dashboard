@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       {token ? (
-        <main className="w-screen h-screen flex flex-1 bg-gray-100">
+        <main className="w-screen h-screen flex flex-1 bg-gray-100 p-5">
           <Dashboard />
         </main>
       ) : (

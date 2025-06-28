@@ -63,6 +63,22 @@
       "startDate": "2025-06-28T19:10",
       "message": "Message",
       "status": "scheduled"
+    },
+    {
+      "id": "btfp37mzv5n",
+      "name": "Follow-up Message",
+      "type": "sms",
+      "startDate": "2025-06-28T19:42",
+      "message": "Follow-up Message",
+      "status": "scheduled"
+    },
+    {
+      "id": "jf0bj162ht",
+      "name": "string1",
+      "type": "email",
+      "startDate": "2025-06-28T07:47",
+      "message": "1",
+      "status": "scheduled"
     }
   ]
 }
